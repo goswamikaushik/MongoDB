@@ -51,13 +51,40 @@ const User = mongoose.model("User", userSchema);
 //     console.log(err);
 // });
 
+
+
+
 //inserting  multiple data at time
-User.insertMany([
-    { name: "manav", email: "manu@gmail.com", age: 23 },
-    { name: "kanu kaka", email: "kanu@gmail.com", age: 21 },
-    { name: "monika", email: "monika@gmail.com", age: 22 },
-]).then((res) => {
-    console.log(res);
+// User.insertMany([
+//     { name: "manav", email: "manu@gmail.com", age: 23 },
+//     { name: "kanu kaka", email: "kanu@gmail.com", age: 21 },
+//     { name: "monika", email: "monika@gmail.com", age: 22 },
+// ]).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
+
+
+
+//findig our document using model.find() method
+
+// User.find({}).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
+
+
+// User.find({age : {$gt : 21}}).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
+
+
+User.find({age : {$gt : 21}}).then((res) => {
+    console.log(res[0].name);
 }).catch((err) => {
     console.log(err);
 });
