@@ -21,3 +21,29 @@ const userSchema = new mongoose.Schema({
 //creating model for our new collection 
 
 const User = mongoose.model("User",userSchema);
+
+//creating objct for oure collection and insert our data into that collection
+
+const user1 = new User({
+    name : "kaushik",
+    email: "kaushik@gmail.com",
+    age : 21,
+});
+
+user1.save().then((res) => {
+    console.log(res);
+}).catch((err) => {
+    console.log(err);
+});
+
+const user2 = new User({
+    name : "kumiko",
+    email: "kumiko@gmail.com",
+    age : 21,
+});
+
+user2.save().then((res) => {
+    console.log(res);
+}).catch((err) => {
+    console.log(err);
+});
