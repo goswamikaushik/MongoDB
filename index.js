@@ -119,15 +119,28 @@ const User = mongoose.model("User", userSchema);
 // delete using mongoose
 
 
-User.deleteOne({name : "kanu kaka"}).then((res) => {
-    console.log(res);
-}).catch((err) => {
-    console.log(err);
-});
+// User.deleteOne({name : "kanu kaka"}).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
 
-User.deleteOne({name : "kanu kaka"}).then((res) => {
-    console.log(res);
-}).catch((err) => {
-    console.log(err);
-});
+// User.deleteOne({name : "kanu kaka"}).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
+
+
+// User.findOneAndDelete({name : "monika"}, {new : true}).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
+
+// User.findByIdAndDelete(659100a4a97d9d7e3cdbf22a).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
 
